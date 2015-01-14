@@ -45,6 +45,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\Request.cs" />
     <Compile Include="Requests\RequestChallenge.cs" />
+    <Compile Include="Requests\RequestSessionKey.cs" />
+    <Compile Include="Requests\TestKeyRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

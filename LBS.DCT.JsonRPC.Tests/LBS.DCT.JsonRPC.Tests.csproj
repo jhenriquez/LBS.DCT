@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,12 +43,17 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\RequestChallengeTest.cs" />
+    <Compile Include="Requests\RequestSessionKeyTest.cs" />
+    <Compile Include="Requests\TestKeyRequestTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LBS.DCT.JsonRPC\LBS.DCT.JsonRPC.csproj">
       <Project>{9d87dab2-7f96-4bd8-bd3d-2084a73da1be}</Project>
       <Name>LBS.DCT.JsonRPC</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

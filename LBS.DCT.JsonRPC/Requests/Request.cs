@@ -7,6 +7,14 @@ namespace LBS.DCT.JsonRPC.Requests
 {
     public abstract class Request
     {
+
+        private Action<dynamic> ExecuteAsyncCallBack { get; set; }
+        private WebClient Client { get; set; }
+        public string Id { get; private set; }
+        public string Url { get; private set; }
+        protected string Method { get; set; }
+        protected JToken Parameters { get; set; }
+
         protected Request(string url, string id)
         {
             Client = new WebClient();
@@ -25,19 +33,12 @@ namespace LBS.DCT.JsonRPC.Requests
             Url = url;
         }
 
-        private Action<dynamic> ExecuteAsyncCallBack { get; set; }
-        private WebClient Client { get; set; }
-        public string Id { get; private set; }
-        public string Url { get; private set; }
-        protected string Method { get; set; }
-        protected JToken Parameters { get; set; }
-
-        public dynamic Execute()
+        public virtual dynamic Execute()
         {
             return JsonConvert.DeserializeObject(Client.UploadString(new Uri(Url), "POST", BuildRequest()));
         }
 
-        public void ExecuteAsync(Action<dynamic> cb)
+        public virtual void ExecuteAsync(Action<dynamic> cb)
         {
             ExecuteAsyncCallBack = cb;
             Client.UploadStringCompleted += Client_UploadStringCompleted;
