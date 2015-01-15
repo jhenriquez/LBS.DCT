@@ -3,9 +3,9 @@ using Newtonsoft.Json.Linq;
 
 namespace LBS.DCT.JsonRPC.Requests
 {
-    public class RequestChallenge : Request
+    public class ChallengeRequest : Request
     {
-        public RequestChallenge(String url)
+        public ChallengeRequest(String url)
             : base(url, Guid.NewGuid().ToString())
         {
             Method = "open";

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LBS.DCT.JsonRPC.Requests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -11,12 +7,12 @@ namespace LBS.DCT.JsonRPC.Tests.Requests
     [TestClass]
     public class TestKeyRequestTest
     {
-        private TestKeyRequest testSubject;
+        private TestKeyRequest _testSubject;
 
         [TestInitialize]
         public void BeforeEach()
         {
-            testSubject = new TestKeyRequest("https://pegasus1.pegasusgateway.com/rpc/");
+            _testSubject = new TestKeyRequest("https://pegasus1.pegasusgateway.com/rpc/");
         }
 
         [TestMethod]
@@ -26,7 +22,7 @@ namespace LBS.DCT.JsonRPC.Tests.Requests
 
             try
             {
-                testSubject.Execute();
+                _testSubject.Execute();
             }
             catch (InvalidOperationException ex)
             {
@@ -39,7 +35,7 @@ namespace LBS.DCT.JsonRPC.Tests.Requests
         [TestMethod]
         public void it_should_return_a_result_property_with_value_ok_when_key_is_valid()
         {
-            var response = testSubject.Execute();
+            var response = _testSubject.Execute();
             Assert.IsNotNull(response.result);
         }
     }

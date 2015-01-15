@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
 namespace LBS.DCT.JsonRPC.Requests
 {
-    public class RequestSessionKey : Request
+    public class SessionKeyRequest : Request
     {
         public String Challenge { get; set; }
         public String HashedSecret { get; set; }
 
-        public RequestSessionKey(String url) : base(url, Guid.NewGuid().ToString())
+        public SessionKeyRequest(String url) : base(url, Guid.NewGuid().ToString())
         {
             Method = "open";
         }
