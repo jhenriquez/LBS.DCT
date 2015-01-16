@@ -26,7 +26,7 @@ namespace LBS.DCT.JsonRPC.Requests
 
             if (String.IsNullOrEmpty(url))
             {
-                throw new ArgumentException("id: can not be null or empty.");
+                throw new ArgumentException("Url: can not be null or empty.");
             }
 
             Id = id;
