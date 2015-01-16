@@ -30,10 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +48,7 @@
     <Compile Include="Requests\Request.cs" />
     <Compile Include="Requests\ChallengeRequest.cs" />
     <Compile Include="Requests\SessionKeyRequest.cs" />
+    <Compile Include="Requests\SetOutputRequest.cs" />
     <Compile Include="Requests\TestKeyRequest.cs" />
   </ItemGroup>
   <ItemGroup>
