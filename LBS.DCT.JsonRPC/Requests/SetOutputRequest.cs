@@ -19,8 +19,7 @@ namespace LBS.DCT.JsonRPC.Requests
         [Required]
         public string OType { get; set; }
 
-        [Required]
-        public string OutputIndex { get; set; }
+        public int OutputIndex { get; set; }
 
         public bool State { get; set; }
 
@@ -44,11 +43,11 @@ namespace LBS.DCT.JsonRPC.Requests
 
             if (results.FirstOrDefault() != null)
             {
-                throw new ArgumentNullException(String.Join(",", results.Select(v => v.MemberNames.FirstOrDefault())));
+                throw new InvalidOperationException(String.Join(",", results.Select(v => v.MemberNames.FirstOrDefault())));
             }
 
-            Parameters = new JArray(new object[] { JValue.CreateString(SessionKey), JValue.CreateString(IdType), JValue.CreateString(ID),
-                                                JValue.CreateString(OType), JValue.CreateString(OutputIndex), JValue.CreateString(State.ToString()) });
+            Parameters = new JArray(new [] { JValue.CreateString(SessionKey), JValue.CreateString(IdType), JValue.CreateString(ID),
+                                                JValue.CreateString(OType), new JValue(OutputIndex), new JValue(State) });
 
             return base.Execute();
         }
