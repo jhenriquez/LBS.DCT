@@ -15,6 +15,21 @@ namespace LBS.DCT.JsonRPC.Requests
 
         public override dynamic Execute()
         {
+            ValidateParameters();
+
+            Parameters = new JArray(new [] { JValue.CreateString(Challenge), JValue.CreateString(HashedSecret) });
+            return base.Execute();
+        }
+
+        public override void ExecuteAsync(Action<dynamic> cb)
+        {
+            ValidateParameters();
+            Parameters = new JArray(new[] { JValue.CreateString(Challenge), JValue.CreateString(HashedSecret) });
+ 	        base.ExecuteAsync(cb);
+        }
+
+        private void ValidateParameters()
+        {
             if (String.IsNullOrEmpty(Challenge))
             {
                 throw new InvalidOperationException("Challenge was not provided.");
@@ -24,9 +39,7 @@ namespace LBS.DCT.JsonRPC.Requests
             {
                 throw new InvalidOperationException("HashedSecret was not provided.");
             }
-
-            Parameters = new JArray(new [] { JValue.CreateString(Challenge), JValue.CreateString(HashedSecret) });
-            return base.Execute();
         }
+        
     }
 }

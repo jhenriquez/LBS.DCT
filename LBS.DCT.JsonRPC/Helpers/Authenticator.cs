@@ -35,15 +35,31 @@ namespace LBS.DCT.JsonRPC.Helpers
 
         public String Execute()
         {
-            Challenge = SessionKeyRequest.Challenge = ChallengeRequest.Execute().result.ToString();
-
-            SessionKeyRequest.HashedSecret = Hash != null ?  Hash(Challenge) : internalHasher();
-
+            HashChallenge(ChallengeRequest.Execute());
             return SessionKeyRequest.Execute().result.ToString();
         }
 
-        public void ExecuteAsync(Action<String> callback)
+        public void ExecuteAsync(Action<String> cb)
         {
+            AsyncCallback = cb;
+            ChallengeRequest.ExecuteAsync(ChallengeRetrieved);
+        }
+
+        private void ChallengeRetrieved(dynamic challenge)
+        {
+            HashChallenge(ChallengeRequest.Execute());
+            SessionKeyRequest.ExecuteAsync(SessionKeyRetrieved);
+        }
+
+        private void SessionKeyRetrieved(dynamic sessionKey)
+        {
+            AsyncCallback(sessionKey.result.ToString());
+        }
+
+        private void HashChallenge(dynamic challenge)
+        {
+            Challenge = SessionKeyRequest.Challenge = challenge.result.ToString();
+            SessionKeyRequest.HashedSecret = Hash != null ? Hash(Challenge) : internalHasher();
         }
 
         private String internalHasher()

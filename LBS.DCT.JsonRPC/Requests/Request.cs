@@ -2,6 +2,7 @@
 using System;
 using System.Net;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace LBS.DCT.JsonRPC.Requests
 {
@@ -40,15 +41,10 @@ namespace LBS.DCT.JsonRPC.Requests
 
         public virtual void ExecuteAsync(Action<dynamic> cb)
         {
-            ExecuteAsyncCallBack = cb;
-            Client.UploadStringCompleted += Client_UploadStringCompleted;
+            Client.UploadStringCompleted += (s, e) => { cb( JsonConvert.DeserializeObject(e.Result)); };
             Client.UploadStringAsync(new Uri(Url), "POST", BuildRequest());
         }
 
-        private void Client_UploadStringCompleted(object sender, UploadStringCompletedEventArgs e)
-        {
-            ExecuteAsyncCallBack(JsonConvert.DeserializeObject(e.Result));
-        }
 
         private String BuildRequest()
         {
