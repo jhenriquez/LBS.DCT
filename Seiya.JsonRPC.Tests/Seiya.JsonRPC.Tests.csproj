@@ -49,10 +49,13 @@
     <Compile Include="Requests\TestKeyRequestTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LBS.DCT.JsonRPC\Seiya.JsonRPC.csproj">
+    <ProjectReference Include="..\Seiya.JsonRPC\Seiya.JsonRPC.csproj">
       <Project>{9d87dab2-7f96-4bd8-bd3d-2084a73da1be}</Project>
       <Name>Seiya.JsonRPC</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
