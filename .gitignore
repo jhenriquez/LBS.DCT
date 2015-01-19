@@ -1,7 +1,13 @@
 bin/
 obj/
 packages/
+
 *.suo
+
 *.config
+
 *.user
+
 *.cd
+
+*.nupkg
