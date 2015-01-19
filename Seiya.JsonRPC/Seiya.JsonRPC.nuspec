@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial Package Release.</releaseNotes>
+    <copyright>Julio Henriquez and Dionisio Ripoll. All rights reserved.</copyright>
+    <tags>WebClient DCT Pegasus Gateway</tags>
+  </metadata>
+</package>

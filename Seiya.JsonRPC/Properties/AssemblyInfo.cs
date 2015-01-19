@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Seiya.JsonRPC")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Library to access the DCT (Pegasus Gateway) RPC web service.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Seiya.JsonRPC")]
