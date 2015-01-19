@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Seiya.JsonRPC")]
 [assembly: AssemblyDescription("Library to access the DCT (Pegasus Gateway) RPC web service.")]
 [assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyCompany("Julio Henriquez and Dionisio Ripoll")]
 [assembly: AssemblyProduct("Seiya.JsonRPC")]
 [assembly: AssemblyCopyright("Julio Henriquez and Dionisio Ripoll. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
