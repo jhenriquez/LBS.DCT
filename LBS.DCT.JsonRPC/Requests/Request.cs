@@ -4,7 +4,7 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
-namespace LBS.DCT.JsonRPC.Requests
+namespace Seiya.JsonRPC.Requests
 {
     public abstract class Request
     {

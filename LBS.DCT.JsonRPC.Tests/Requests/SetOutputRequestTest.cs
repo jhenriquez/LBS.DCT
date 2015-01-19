@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Configuration;
-using LBS.DCT.JsonRPC.Helpers;
-using LBS.DCT.JsonRPC.Requests;
+using Seiya.JsonRPC.Helpers;
+using Seiya.JsonRPC.Requests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LBS.DCT.JsonRPC.Tests.Requests
+namespace Seiya.JsonRPC.Tests.Requests
 {
     [TestClass]
     public class SetOutputRequestTest

@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace LBS.DCT.JsonRPC.Requests
+namespace Seiya.JsonRPC.Requests
 {
     public class SetOutputRequest : Request
     {

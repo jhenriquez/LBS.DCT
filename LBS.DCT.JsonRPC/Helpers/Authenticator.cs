@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
-using LBS.DCT.JsonRPC.Requests;
+using Seiya.JsonRPC.Requests;
 
-namespace LBS.DCT.JsonRPC.Helpers
+namespace Seiya.JsonRPC.Helpers
 {
     public class Authenticator
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
 
-namespace LBS.DCT.JsonRPC.Requests
+namespace Seiya.JsonRPC.Requests
 {
     public class TestKeyRequest : Request
     {

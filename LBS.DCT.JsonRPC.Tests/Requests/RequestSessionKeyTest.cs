@@ -3,10 +3,10 @@ using System.Configuration;
 using System.Dynamic;
 using System.Security.Cryptography;
 using System.Text;
-using LBS.DCT.JsonRPC.Requests;
+using Seiya.JsonRPC.Requests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LBS.DCT.JsonRPC.Tests.Requests
+namespace Seiya.JsonRPC.Tests.Requests
 {
     [TestClass]
     public class RequestSessionKeyTest

@@ -3,11 +3,11 @@ using System.Configuration;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
-using LBS.DCT.JsonRPC.Helpers;
-using LBS.DCT.JsonRPC.Requests;
+using Seiya.JsonRPC.Helpers;
+using Seiya.JsonRPC.Requests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LBS.DCT.JsonRPC.Tests.Helpers
+namespace Seiya.JsonRPC.Tests.Helpers
 {
     [TestClass]
     public class AuthenticatorTest

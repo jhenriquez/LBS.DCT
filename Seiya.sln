@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBS.DCT.JsonRPC", "LBS.DCT.JsonRPC\LBS.DCT.JsonRPC.csproj", "{9D87DAB2-7F96-4BD8-BD3D-2084A73DA1BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seiya.JsonRPC", "LBS.DCT.JsonRPC\Seiya.JsonRPC.csproj", "{9D87DAB2-7F96-4BD8-BD3D-2084A73DA1BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBS.DCT.JsonRPC.Tests", "LBS.DCT.JsonRPC.Tests\LBS.DCT.JsonRPC.Tests.csproj", "{5E28559E-4480-43DF-8A4D-CA347A463747}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seiya.JsonRPC.Tests", "LBS.DCT.JsonRPC.Tests\Seiya.JsonRPC.Tests.csproj", "{5E28559E-4480-43DF-8A4D-CA347A463747}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,9 @@
 ﻿using System.Dynamic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using LBS.DCT.JsonRPC.Requests;
+using Seiya.JsonRPC.Requests;
 using System.Threading;
 
-namespace LBS.DCT.JsonRPC.Tests.Requests
+namespace Seiya.JsonRPC.Tests.Requests
 {
     [TestClass]
     public class RequestChallengeTest

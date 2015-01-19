@@ -49,9 +49,9 @@
     <Compile Include="Requests\TestKeyRequestTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LBS.DCT.JsonRPC\LBS.DCT.JsonRPC.csproj">
+    <ProjectReference Include="..\LBS.DCT.JsonRPC\Seiya.JsonRPC.csproj">
       <Project>{9d87dab2-7f96-4bd8-bd3d-2084a73da1be}</Project>
-      <Name>LBS.DCT.JsonRPC</Name>
+      <Name>Seiya.JsonRPC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
